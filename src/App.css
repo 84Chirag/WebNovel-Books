@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+.btn-5 {
+  position: fixed; 
+  top : 93%; 
+  left: 95%;
+}
+
+@media screen and (min-width: 393px) and (max-width: 393px) {
+  .navbar {
+    text-align: center;
+  }
+
+  .btn-5 {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
