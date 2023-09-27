@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import themeContext from '../context/notes/themeContext'  // Import the theme context.
+import themeContext from '../context/themes/themeContext'  // Import the theme context.
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
@@ -35,7 +35,7 @@ const Navbar = (props) => {
           {/* The togglemode function is called when the button is clicked to toggle between light and dark modes.  */}
           <button className="btn btn-5 mx-2" onClick={togglemode}>{modestate === 'light' ? ( 
             // If the modestate is 'light', it renders a sun icon (indicating light mode), and if it's anything else, it renders a moon icon (indicating dark mode).
-            <FontAwesomeIcon icon={faSun} />
+            <FontAwesomeIcon style={{color:"yellow"}} icon={faSun} />
             ) : (
               <FontAwesomeIcon icon={faMoon} />
           )

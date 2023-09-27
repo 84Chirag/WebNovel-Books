@@ -1,8 +1,11 @@
 import React from 'react'
+import AllBooks from './allbooks/AllBooks'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div className='container'>
+      <AllBooks />
+    </div>
   )
 }
 

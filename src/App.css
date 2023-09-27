@@ -42,7 +42,7 @@
   left: 95%;
 }
 
-@media screen and (min-width: 393px) and (max-width: 393px) {
+@media screen and (min-width: 393px) and (max-width: 412px) {
   .navbar {
     text-align: center;
   }
