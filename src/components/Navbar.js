@@ -8,6 +8,10 @@ const Navbar = (props) => {
   let location = useLocation();
   useEffect(() => {
   }, [location]);
+  // const searchbar = (e) => {
+  //   e.preventDefault();
+  // }
+
   // Access the togglemode and modestate values from the themeContext.
   const { togglemode, modestate } = useContext(themeContext);
   return (
@@ -22,26 +26,29 @@ const Navbar = (props) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className={`nav-link ${location.pathname === '/' ? 'active': ""}`} aria-current="page" to="/">Home</Link>
+              <Link className={`nav-link ${location.pathname === '/' ? 'active' : ""}`} aria-current="page" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link className={`nav-link ${location.pathname === '/about' ? 'active': ""}`} to="/about">About</Link>
+              <Link className={`nav-link ${location.pathname === '/about' ? 'active' : ""}`} to="/about">About</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">Disabled</Link>
+              <Link className={`nav-link ${location.pathname === '/login' ? 'active' : ""}`} to="/login">login</Link>
+            </li>
+            <li className="nav-item">
+              <Link className={`nav-link ${location.pathname === '/signup' ? 'active' : ""}`} to="/signup">signup</Link>
             </li>
           </ul>
           {/* we're conditionally rendering a button with either a sun or moon icon based on the value of the modestate variable.*/}
           {/* The togglemode function is called when the button is clicked to toggle between light and dark modes.  */}
-          <button className="btn btn-5 mx-2" onClick={togglemode}>{modestate === 'light' ? ( 
+          <button className="btn btn-5 mx-2" onClick={togglemode}>{modestate === 'light' ? (
             // If the modestate is 'light', it renders a sun icon (indicating light mode), and if it's anything else, it renders a moon icon (indicating dark mode).
-            <FontAwesomeIcon style={{color:"yellow"}} icon={faSun} />
-            ) : (
-              <FontAwesomeIcon icon={faMoon} />
+            <FontAwesomeIcon icon={faSun} rotation={270} style={{color: "#000000",}} />
+          ) : (
+            <FontAwesomeIcon icon={faMoon} />
           )
           }</button>
           <form className="d-flex" role="search">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
             {/* <button className="btn btn-outline-success" type="submit">Search</button> */}
           </form>
         </div>
