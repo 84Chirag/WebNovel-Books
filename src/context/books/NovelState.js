@@ -15,7 +15,7 @@ const NovelState = (props) => {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",
-                "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwYTgxMmFmOTkzOWEwZjAyYzk2ZWJkIn0sImlhdCI6MTY5NTE4OTc1OX0.WqJ4Fp_ujwSmdjQM_C3-QpqfPK2iZquZhLORyT40lOs"
+                "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUxOTBiMTBhN2JjOTIzYThjNjlhNjE4In0sImlhdCI6MTY5NjE0MDE1NX0.QjOwFBKX6Y7021WHEbxirv0TV408IOeuh-_qVlFj_58"
             }
         });
         const json = await response.json();
