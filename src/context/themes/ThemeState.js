@@ -20,8 +20,7 @@ const ThemeState = (props) => {
             document.body.style.backgroundColor = "white";
             document.body.style.color = "black";
 
-        };
-        // localStorage.setItem('mode',modestate)
+        }
     };
 
     // Provide the theme mode and toggle function to components wrapped inside this provider.

@@ -52,7 +52,13 @@
     top: 0;
     left: 0;
   }
+  .formob{
+    flex-direction: column;
+  }
 }
 .card{
   width: 18rem !important;
+}
+.formob{
+  display: flex;
 }

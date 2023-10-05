@@ -1,16 +1,22 @@
 import React, { useContext, useEffect } from 'react'
 import Topbook from './Topbook'
 import bookContext from '../../../context/books/bookContext'
+import { useNavigate } from 'react-router-dom'
 
 const TopNovels = () => {
 
+  const navigate = useNavigate();
   const { getbooks, books } = useContext(bookContext);
   // const { items, getbooks1} = useContext(bookContext);
   // console.log(items)
 
   useEffect(() => {
-    // getbooks1();
-    getbooks();
+    if (localStorage.getItem('token')) {
+      getbooks();
+      // getbooks1();
+    } else {
+      navigate('/login')
+    }
     // eslint-disable-next-line
   }, [])
 
@@ -21,7 +27,7 @@ const TopNovels = () => {
 
   return (
     <div className='container my-4'>
-      <h2 className='mb-4'>Top Novel</h2>
+      <h2 className='mb-2'>Top Novel</h2>
       <div className='row'>
         {books.map((book) => {
           return <Topbook key={book._id} book={book} />

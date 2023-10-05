@@ -15,7 +15,7 @@ const NovelState = (props) => {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",
-                "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUxOTBiMTBhN2JjOTIzYThjNjlhNjE4In0sImlhdCI6MTY5NjE0MDE1NX0.QjOwFBKX6Y7021WHEbxirv0TV408IOeuh-_qVlFj_58"
+                "auth-token": localStorage.getItem('token')
             }
         });
         const json = await response.json();

@@ -1,12 +1,17 @@
 import React, { useContext, useEffect } from 'react'
 import Weekbook from './Weekbook'
 import bookContext from '../../../context/books/bookContext'
+import { useNavigate } from 'react-router-dom'
 
 const Weeklynovel = () => {
-
+  const navigate = useNavigate();
   const { books, getbooks } = useContext(bookContext);
   useEffect (()=>{
-    getbooks();
+    if (localStorage.getItem('token')) {
+      getbooks();
+    } else {
+      navigate('/login')
+    }
   },[])
   return (
     <div className='container my-4'>
