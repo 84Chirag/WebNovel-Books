@@ -19,10 +19,11 @@ const ThemeState = (props) => {
             // Update the body background and text color for the light theme.
             document.body.style.backgroundColor = "white";
             document.body.style.color = "black";
-
         }
+        localStorage.setItem('mode',modestate);
     };
-
+    const modestate1 = localStorage.getItem('mode')
+    console.log(modestate1)
     // Provide the theme mode and toggle function to components wrapped inside this provider.
     return (
         <ThemeContext.Provider value={{ togglemode, modestate }}>

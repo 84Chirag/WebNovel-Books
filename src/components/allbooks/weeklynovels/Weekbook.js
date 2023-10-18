@@ -9,7 +9,8 @@ const Weekbook = (props) => {
   // console.log(modestate);
   const cardStyle = {
     background: modestate === 'light' ? 'white' : 'black',
-    color: modestate === 'light' ? 'black' : 'white'
+    color: modestate === 'light' ? 'black' : 'white',
+    textDecoration: 'none'
   };
   // Function to truncate text to a specified length
   const truncateText = (text, maxLength) => {
